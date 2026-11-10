@@ -134,8 +134,73 @@
             </div>
 
         </section>
+<!-- Main Container สำหรับ Mobile: ล็อกความกว้าง 375px, ขอบซ้าย-ขวา 16px, เว้นด้านล่าง 80px ตามสเปก -->
+<div class="min-h-screen bg-gray-50 flex flex-col justify-between w-full max-w-[375px] mx-auto px-[16px] pb-[80px] shadow-xl overflow-hidden">
 
-    </div>
+    <main class="w-full flex flex-col items-center">
+
+        <!-- 4. CONTACT SECTION (การ์ดฟอร์มสำหรับมือถือโดยเฉพาะ) -->
+        <!-- ระยะห่างด้านล่าง (mb) 60px และ padding ภายในพอดีกับจอ 375px -->
+        <div class="bg-white w-full rounded-2xl shadow-md p-6 text-left mb-[60px] mt-8">
+            
+            <h2 class="text-2xl font-bold text-center text-gray-900 mb-6">
+                Get in Touch
+            </h2>
+
+            <!-- ฟอร์มติดต่อพร้อมใช้งานจริง (มี id, name และ required) -->
+            <form class="space-y-4 w-full" action="#" method="POST">
+                
+                <div>
+                    <label for="name" class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">
+                        Name
+                    </label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required
+                        class="w-full px-3.5 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-gray-400 text-gray-700 placeholder-gray-400 text-sm transition">
+                </div>
+
+                <div>
+                    <label for="email" class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">
+                        Email
+                    </label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required
+                        class="w-full px-3.5 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-gray-400 text-gray-700 placeholder-gray-400 text-sm transition">
+                </div>
+
+                <div>
+                    <label for="message" class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">
+                        Message
+                    </label>
+                    <textarea id="message" name="message" rows="4" placeholder="Your message..." required
+                        class="w-full px-3.5 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-gray-400 text-gray-700 placeholder-gray-400 text-sm transition resize-none"></textarea>
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit" 
+                        class="w-full py-3 bg-[#141824] hover:bg-gray-800 text-white font-medium rounded-xl transition duration-200 shadow-md cursor-pointer text-sm">
+                        Submit
+                    </button>
+                </div>
+
+            </form>
+        </div>
+
+    </main>
+
+    <!-- 5. FOOTER สำหรับ Mobile -->
+    <!-- จัดเรียงแบบแนวตั้งตรงกลางเนื่องจากหน้าจอแคบ (375px) ป้องกันเมนูเบียดกัน -->
+    <footer class="w-full flex flex-col justify-center items-center text-xs text-gray-500 gap-3 text-center">
+        <div>
+            Acme productivity app ©2024
+        </div>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="#" class="hover:text-black transition">FAQ</a>
+            <a href="#" class="hover:text-black transition">Terms</a>
+            <a href="#" class="hover:text-black transition">AI Policy</a>
+            <a href="#" class="hover:text-black transition">Pricing</a>
+        </div>
+    </footer>
+
+</div>
 
 </body>
 </html>
